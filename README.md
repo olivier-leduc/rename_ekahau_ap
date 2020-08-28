@@ -4,8 +4,8 @@
 
 Often when performing a post install validation survey, we like to see actual AP
 names instead of randomly assigned names. And because AP names aren't
-necessarily advertised in the beacons, we have to manually type in the AP names
-in the survey software.
+necessarily advertised in the beacons, we have to manually type them in
+in Ekahau Pro.
 
 In Ekahau's current version (10.0.2), renaming APs is only possible using the
 GUI, by editing APs one by one, which can be laborious if you have many APs in
