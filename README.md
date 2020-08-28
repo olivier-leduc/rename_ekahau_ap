@@ -5,7 +5,7 @@
 Often when performing a post install validation survey, we like to see actual AP
 names instead of randomly assigned names. And because AP names aren't
 necessarily advertised in the beacons, we have to manually type them in
-in Ekahau Pro.
+Ekahau Pro.
 
 In Ekahau's current version (10.0.2), renaming APs is only possible using the
 GUI, by editing APs one by one, which can be laborious if you have many APs in
@@ -16,7 +16,8 @@ names into Ekahau pro.
 
 ## Prerequisites
 
-> **This tool can only be ran after the survey is completed.**
+> **This tool can only be ran after the survey is completed. You will not be
+> able to see AP names during a live survey.**
 
 ### 1) Obtain a BSSID table containing the BSSID <-> AP name mapping
 
@@ -53,7 +54,10 @@ native compression software).
 
 ## Usage Examples
 
-`python3 rename_ekahau_apnames.py -b ~/bssidmapping.csv -f ~/myekahauproject/`
+```
+$python3 rename_ekahau_apnames.py -b ~/bssidmapping.csv -f ~/myekahauproject/
+AP were successfully named in accessPoints.json. Now zip all the files in that folder and change the extention from .zip to .esx.")
+```
 
 ## Disclaimer
 
