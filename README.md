@@ -2,16 +2,16 @@
 
 ## Summary
 
-Often when performing a post install validation survey, we like to see what AP
-name is each sampled BSSID associated with. And because the AP name isn't
+Often when performing a post install validation survey, we like to see actual AP
+names instead of randomly assigned names. And because AP names aren't
 necessarily advertised in the beacons, we have to manually type in the AP names
 in the survey software.
 
 In Ekahau's current version (10.0.2), renaming APs is only possible using the
-GUI, by editing APs one by one, which can be laborious if you have many APs to
-name.
+GUI, by editing APs one by one, which can be laborious if you have many APs in
+the survey.
 
-This small utility allows you to import a list of BSSIDs and their associated AP
+This simple script allows you to import a list of BSSIDs and their associated AP
 names into Ekahau pro.
 
 ## Prerequisites
@@ -22,12 +22,12 @@ names into Ekahau pro.
 
 Prior to running the tool, you need to collect the BSSID <-> AP name mapping
 for all BSSes that you'd like to have named in Ekahau.
-There are many ways to do that depending on which vendor your are using and what
-tool do you use to monitor your WiFi infrastructure. It's up to you how you
-collect that information.
+There are many ways to do that depending on which WiFi vendor you have and which
+tool do you use to monitor your WiFi infrastructure. It is up to you how you
+want to collect that information.
 
-After you collect the BSSID table, edit the data in a text file to have it
-confom to this format:
+After you have collected the BSSID table, edit the data in a text file to have
+it confom to this format:
 
 ```
 <apname1>,<macaddress1>
@@ -35,7 +35,7 @@ confom to this format:
 ```
 > Each line should contain comma separated AP name/MAC address pairings.
 > The MAC addresses in the file must be in the colon separated octets 
-> format.
+> format (MAC address and AP names are not case sensitive).
 > example: 00:11:22:aa:bb:cc
 
 ### 2)  Unzip the esx file
@@ -57,6 +57,6 @@ native compression software).
 
 ## Disclaimer
 
-This script does not have a lot of exception handling in place(lots of TODOs) so
+This script does not have a lot of error handling in place(lots of TODOs) so
 make sure your input files (BSSID mapping and esx folder) are in the right
 format.
