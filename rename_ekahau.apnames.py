@@ -9,9 +9,6 @@ __version__ = "0.1"
     This script will update entries in the accessPoints.json file and renames generically named APs ("Measured AP-XX:XX" into
     AP names of your liking. The esx file needs to be unzipped prior to executing this script.
 
-    After running the script, you have zip all the files using your os zipping software (resulting zip file must not include
-    any other files than those originally included in the esx file). Change the extention of the newly zipped file to .esx
-    so that Ekahau pro can open the file. Once the project is opened in Ekahau, your AP names should show up.
 """
 
 import json, os, sys
@@ -45,14 +42,16 @@ def main():
       bssidmapping_list = f.readlines()
       bssidmapping = {}
       for line in bssidmapping_list:
+        # TODO: add exception for misformatted lines.
         row = line.strip().split(',')
-        bssidmapping[row[0]] = row[1]
+        bssidmapping[row[0]] = row[1].lower()
 
     with open(os.path.join(args.esxfolder, 'accessPoints.json')) as f:
       esxdata = json.load(f)
 
     for apname, bssid in bssidmapping.items():
       for ap in esxdata['accessPoints']:
+        # TODO: add exception for repeated last 4 octets (it might happen).
         if bssid[-5:] in ap['name'] :
           ap['name'] = ap['name'].replace(ap['name'], apname)
 
