@@ -25,7 +25,7 @@ def initialize():
     os.chdir(os.environ['HOME'])
 
     parser = argparse.ArgumentParser(description='some information',
-        usage='use "python %(prog)s --help" for more information',
+        usage='use "python3 %(prog)s --help" for more information',
         formatter_class=argparse.RawTextHelpFormatter)
 
     parser.add_argument("-b", dest="bssidmapping", required=True,
@@ -58,6 +58,7 @@ def main():
 
     with open(os.path.join(args.esxfolder, 'accessPoints.json'), 'w') as f:
       json.dump(esxdata, f, indent=4)
+    print("AP were successfully named in accessPoints.json. Now zip all the files in that folder and change the extention from .zip to .esx.")
 
 if __name__ == '__main__':
     parser = initialize()

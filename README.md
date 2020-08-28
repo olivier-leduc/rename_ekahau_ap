@@ -1,4 +1,4 @@
-# Rename APs in bulk in Ekahau
+# Rename APs in bulk in Ekahau Pro.
 
 ## Summary
 
@@ -55,8 +55,23 @@ native compression software).
 ## Usage Examples
 
 ```
-$python3 rename_ekahau_apnames.py -b ~/bssidmapping.csv -f ~/myekahauproject/
+$ python3 rename_ekahau_apnames.py -b ~/bssidmapping.csv -f ~/myekahauproject/
 AP were successfully named in accessPoints.json. Now zip all the files in that folder and change the extention from .zip to .esx.")
+
+$ python3 rename_ekahau.apnames.py --help
+usage: use "python rename_ekahau.apnames.py --help" for more information
+
+some information
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -b FILE     Input the full path of the file containing AP<->BSSID mapping.
+              ex: /Users/johnsmith/bssidmap.csv
+              The file should be using this format:
+              ap1,f0:72:ea:18:37:cd
+              ap2,f0:9f:c2:a4:67:e8
+  -f FILE     Input the full path of the UNZIPPED esx file.
+              ex: /Users/johnsmith/warehousesurvey/
 ```
 
 ## Disclaimer
