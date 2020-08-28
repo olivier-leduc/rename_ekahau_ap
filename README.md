@@ -59,9 +59,9 @@ $ python3 rename_ekahau_apnames.py -b ~/bssidmapping.csv -f ~/myekahauproject/
 AP were successfully named in accessPoints.json. Now zip all the files in that folder and change the extention from .zip to .esx.")
 
 $ python3 rename_ekahau.apnames.py --help
-usage: use "python rename_ekahau.apnames.py --help" for more information
+usage: use "python rename_ekahau_apnames.py --help" for more information
 
-some information
+Rename APs in Ekahau Pro.
 
 optional arguments:
   -h, --help  show this help message and exit

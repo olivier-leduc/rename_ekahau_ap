@@ -24,7 +24,7 @@ def initialize():
     # Change to a generally reliable working directory.
     os.chdir(os.environ['HOME'])
 
-    parser = argparse.ArgumentParser(description='some information',
+    parser = argparse.ArgumentParser(description='Rename APs in Ekahau Pro.',
         usage='use "python3 %(prog)s --help" for more information',
         formatter_class=argparse.RawTextHelpFormatter)
 
