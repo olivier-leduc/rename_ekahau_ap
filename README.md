@@ -19,7 +19,7 @@ names into Ekahau pro.
 > **This tool can only be ran after the survey is completed. You will not be
 > able to see AP names during a live survey.**
 
-### 1) Obtain a BSSID table containing the BSSID <-> AP name mapping
+### 1) Obtain BSSID <-> AP name mapping from the WLAN management server
 
 Prior to running the tool, you need to collect the BSSID <-> AP name mapping
 for all BSSes that you'd like to have named in Ekahau.
@@ -27,8 +27,8 @@ There are many ways to do that depending on which WiFi vendor you have and which
 tool do you use to monitor your WiFi infrastructure. It is up to you how you
 want to collect that information.
 
-After you have collected the BSSID table, edit the data in a text file to have
-it confom to this format:
+Using the aforementioned BSSID <-> AP name mapping BSSID table, edit the data in
+a text file so that it looks like this:
 
 ```
 <apname1>,<macaddress1>
@@ -39,7 +39,7 @@ it confom to this format:
 > format (MAC address and AP names are not case sensitive).
 > example: 00:11:22:aa:bb:cc
 
-### 2)  Unzip the esx file
+### 2)  Unzip the Ekahau file
 
 Once the survey is complete and the Ekahau project is saved, go ahead and
 unzip the corresponding esx file (yes it is a zip file). You will need to
